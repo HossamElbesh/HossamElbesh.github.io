@@ -415,7 +415,7 @@ body.nav-active { overflow: hidden; }
 .nav-toggle-btn.active .line-2 { transform: rotate(-45deg) translate(3px, -2px); }
 
 .navbar {
-  border-radius: 20px 0 0 20px
+  border-radius: 20px 0 0 20px;
   position: absolute;
   top: 100%;
   right: -370px;
