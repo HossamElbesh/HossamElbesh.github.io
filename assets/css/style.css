@@ -530,6 +530,7 @@ body.nav-active { overflow: hidden; }
   height: 100%;
   padding: 60px 40px 40px;
   transition: var(--transition-2);
+  border-radius: 7%;
 }
 
 .service-card .card-icon ion-icon {
@@ -605,6 +606,7 @@ body.nav-active { overflow: hidden; }
 .portfolio .slider { --item-gap: 16px; }
 
 .portfolio-card {
+  border-radius: 7%;
   position: relative;
   background-color: transparent;
   transition: var(--cubic-ease-out);
