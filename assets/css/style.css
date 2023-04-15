@@ -639,6 +639,43 @@ body.nav-active { overflow: hidden; }
   opacity: 1;
 }
 
+/*-----------------------------------*\
+  #BLOG
+\*-----------------------------------*/
+
+.blog-list {
+  border-radius: 7%; 
+  display: grid;
+  gap: 60px;
+}
+
+.blog-card {
+  border-radius: 7%;
+  display: grid;
+  gap: 40px;
+}
+
+.blog-card .card-content {
+  display: flex;
+  gap: 16px;
+  padding-inline: 16px;
+}
+
+.blog-card .card-banner {
+  border-radius: 25px;
+}
+
+.blog-card .time { font-size: var(--fs-7); }
+
+.blog-card .time .span {
+  color: var(--white);
+  font-weight: var(--fw-700);
+  line-height: 0.9;
+}
+
+.blog-card .card-text { margin-block: 20px; }
+
+
 
 /*-----------------------------------*\
   #FOOTER
