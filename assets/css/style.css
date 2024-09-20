@@ -6,10 +6,6 @@
  * copyright 2022 CodeWithHossam
  */
 
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -20,9 +16,9 @@
    * colors
    */
 
-  --raisin-black: hsla(231, 10%, 14%, 1);
+  --raisin-black: #010409 ;
   --roman-silver: hsla(229, 10%, 57%, 1);
-  --eerie-black: hsla(228, 9%, 10%, 1);
+  --eerie-black: #0d1117 ;
   --black: hsla(0, 0%, 0%, 1);
   --white: hsla(0, 0%, 100%, 1);
   --white_a10: hsla(0, 0%, 100%, 0.1);
@@ -421,7 +417,7 @@ body.nav-active { overflow: hidden; }
   right: -370px;
   max-width: 370px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--raisin-black);
   height: 100vh;
   text-align: center;
   padding: 56px 40px;
@@ -437,7 +433,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .navbar-link {
-  color: var(--raisin-black);
+  color: var(--white);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   padding-block: 10px;
