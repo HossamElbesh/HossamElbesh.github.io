@@ -461,6 +461,33 @@ body.nav-active { overflow: hidden; }
   #HERO
 \*-----------------------------------*/
 
+.hero {
+  background-image: url('../images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 17, 23, 0.7);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 .hero { padding-block-start: 130px; }
 
 .hero-title {
