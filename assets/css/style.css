@@ -736,8 +736,26 @@ body.nav-active { overflow: hidden; }
 
 .footer {
   background-color: var(--raisin-black);
-  padding-block: 76px;
-  border-radius: 10px 10px 10px 10px;
+  padding-block: 50px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .footer .container {
@@ -747,26 +765,90 @@ body.nav-active { overflow: hidden; }
 
 .social-list {
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .social-link {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
-  border: 2px solid var(--white_a10);
-  border-radius: var(--radius-circle);
-  color: var(--white);
-  transition: var(--transition-1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #00ffff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.social-link:is(:hover, :focus-visible) { border-color: var(--white); }
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
 
+.social-link:hover::before {
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+}
 
+.social-link:is(:hover, :focus-visible) {
+  border-color: #00ffff;
+  transform: scale(1.05);
+}
 
+.social-link ion-icon {
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
 
+.social-link:hover ion-icon {
+  color: #ffffff;
+}
 
+@media (max-width: 768px) {
+  .footer {
+    padding-block: 30px;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-link ion-icon {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-block: 20px;
+  }
+
+  .social-list {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-link ion-icon {
+    font-size: 0.9em;
+  }
+}
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
