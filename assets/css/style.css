@@ -212,6 +212,7 @@ body.nav-active { overflow: hidden; }
 .btn:is(:hover, :focus-visible)::before { left: calc(100% - 70px); }
 
 .section-subtitle {
+  color: cyan;
   text-transform: uppercase;
   font-size: var(--fs-8);
   font-weight: var(--fw-700);
@@ -268,7 +269,9 @@ body.nav-active { overflow: hidden; }
 .slider-control .line {
   width: 30px;
   height: 1px;
-  background-color: var(--white);
+  background-color: cyan;
+  border-color: cyan;
+  box-shadow : 0 0 15px cyan, 0 0 5px cyan;
 }
 
 .slider-control .arrow {
@@ -283,6 +286,8 @@ body.nav-active { overflow: hidden; }
 .slider-control.prev .arrow {
   left: 0;
   border-width: 0 0 1px 1px;
+  border-color: cyan;
+  color: cyan;
 }
 
 .slider-control.next .arrow {
