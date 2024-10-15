@@ -280,7 +280,8 @@ body.nav-active { overflow: hidden; }
   width: 10px;
   height: 10px;
   border-style: solid;
-  border-color: var(--white);
+  border-color: cyan;
+  color: cyan;
 }
 
 .slider-control.prev .arrow {
