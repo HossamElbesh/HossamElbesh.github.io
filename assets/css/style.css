@@ -561,7 +561,7 @@ body.nav-active { overflow: hidden; }
 
 .service-card {
   position: relative;
-  background-color: var(--white);
+  background-color: var(--raisin-black);
   height: 100%;
   padding: 60px 40px 40px;
   transition: var(--transition-2);
@@ -569,13 +569,13 @@ body.nav-active { overflow: hidden; }
 }
 
 .service-card .card-icon ion-icon {
-  color: var(--content-color, var(--raisin-black));
+  color: var(--content-color, cyan);
   font-size: 6rem;
   --ionicon-stroke-width: 15px;
 }
 
 .service-card .card-title {
-  color: var(--content-color, var(--raisin-black));
+  color: var(--content-color, cyan);
   margin-block: 20px;
 }
 
@@ -593,7 +593,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .service-card:is(:hover, :focus-within) {
-  background-color: var(--raisin-black);
+  background-color: var(--eerie-black);
   --content-color: var(--white);
   box-shadow: 0px 0px 10px cyan;
 }
