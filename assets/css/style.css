@@ -250,6 +250,7 @@ body.nav-active { overflow: hidden; }
   display: flex;
   gap: var(--item-gap);
   transition: transform var(--cubic-ease-out);
+  margin: 8px;
 }
 
 .slider-item {
@@ -594,6 +595,7 @@ body.nav-active { overflow: hidden; }
 .service-card:is(:hover, :focus-within) {
   background-color: var(--raisin-black);
   --content-color: var(--white);
+  box-shadow: 0px 0px 10px cyan;
 }
 
 
