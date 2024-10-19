@@ -624,7 +624,7 @@ body.nav-active { overflow: hidden; }
 
 .progress {
   height: inherit;
-  background-color: var(--white);
+  background-color: cyan;
   border-radius: inherit;
 }
 
