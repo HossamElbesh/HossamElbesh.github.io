@@ -566,6 +566,7 @@ body.nav-active { overflow: hidden; }
   padding: 60px 40px 40px;
   transition: var(--transition-2);
   border-radius: 7%;
+  box-shadow: 0px 0px 6px cyan;
 }
 
 .service-card .card-icon ion-icon {
@@ -595,7 +596,7 @@ body.nav-active { overflow: hidden; }
 .service-card:is(:hover, :focus-within) {
   background-color: var(--eerie-black);
   --content-color: var(--white);
-  box-shadow: 0px 0px 10px cyan;
+  box-shadow: 0px 0px 10px white;
 }
 
 
