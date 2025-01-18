@@ -133,6 +133,29 @@ const initSlider = function (currentSlider) {
     if (event.shiftKey && event.deltaY < 0) slidePrev();
   });
 
+  
+  /**
+   * slide with touch
+   */
+
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  currentSlider.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+  }, false);    
+
+  currentSlider.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    handleGesture();
+  }, false); 
+
+  function handleGesture() {
+    if (touchendX < touchstartX) slideNext();
+    if (touchendX > touchstartX) slidePrev();
+  }
+
+  
   /**
    * RESPONSIVE
    */
