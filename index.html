@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta name="keywords" content="Hossam Elbesh, Elbesh, portfolio, web development, graphic design, photography, Flutter, HTML, CSS, JavaScript, mobile apps" />
   <meta name="author" content="Hossam Elbesh" />
   <meta name="google-site-verification" content="6mOeP0nQlsARSu-NBpwwwuk4GW4MmKYPOTAF5KY4shU" />
@@ -45,12 +45,40 @@
 <body>
 
   <!-- 
-    - #PRELOADER
+    - #INTRO SCREEN
   -->
 
-  <div class="preloader" data-preloader>
-    <div class="circle"></div>
+  <div class="intro-screen" data-intro-screen>
+    <div class="intro-background">
+      <div class="intro-grid"></div>
+      <div class="intro-particles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="intro-content">
+      <h1 class="intro-text" data-intro-text>
+        <span class="intro-letter">D</span>
+        <span class="intro-letter">O</span>
+        <span class="intro-letter space"></span>
+        <span class="intro-letter">M</span>
+        <span class="intro-letter">O</span>
+        <span class="intro-letter">R</span>
+        <span class="intro-letter">E</span>
+      </h1>
+      <div class="intro-line"></div>
+      <img src="./assets/images/LogoLoader.png" alt="Hossam Logo" class="intro-logo">
+    </div>
   </div>
+
+  <!-- 
+    - #PRELOADER
+    - Temporarily disabled - using intro screen only
+  -->
+
+  <!-- <div class="preloader" data-preloader>
+    <img src="./assets/images/LogoLoader.png" alt="Hossam Logo" class="preloader-logo">
+  </div> -->
 
 
 
@@ -100,7 +128,7 @@
           </li>
 
           <li>
-            <a href="https://hossamelbesh.github.io/Card/" target="_blank" class="navbar-link">Contact Me</a>
+            <a href="https://hossamelbesh.github.io/Card/" class="navbar-link">Contact Me</a>
           </li>
 
         </ul>
@@ -164,7 +192,7 @@
       <section id="service" class="service" aria-labelledby="service-label">
         <div class="container">
 
-          <div class="title-wrapper">
+          <div class="title-wrapper" data-scroll="fade-up">
 
             <div>
               <p class="section-subtitle">
@@ -182,9 +210,9 @@
 
           </div>
 
-          <div class="slider" data-slider>
+          <div class="slider" data-slider data-scroll="fade-in">
 
-            <ul class="slider-container service-list" data-slider-container>
+            <ul class="slider-container service-list" data-slider-container data-scroll-stagger>
 
               <li class="slider-item" data-slider-item>
                 <div class="service-card">
@@ -348,11 +376,11 @@
       <section class="section skills" aria-label="our skills">
         <div class="container">
 
-          <p class="section-subtitle">My Skills</p>
+          <p class="section-subtitle" data-scroll="fade-up">My Skills</p>
 
-          <h2 class="h2 section-title">&lt; DO MORE /&gt;</h2>
+          <h2 class="h2 section-title" data-scroll="fade-up">&lt; DO MORE /&gt;</h2>
 
-          <div class="skills-wrapper">
+          <div class="skills-wrapper" data-scroll="fade-up">
 
             <div>
               <p class="section-text">
@@ -456,7 +484,7 @@
 
           <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
 
-            <div class="title-wrapper container">
+            <div class="title-wrapper container" data-scroll="fade-up">
     
               <div>
                 <p class="section-subtitle" id="portfolio-label">OUR CODING WORK</p>
@@ -470,9 +498,9 @@
     
             </div>
     
-            <div class="slider" data-slider>
+            <div class="slider" data-slider data-scroll="fade-in">
     
-              <ul class="slider-container" data-slider-container>
+              <ul class="slider-container" data-slider-container data-scroll-stagger>
     
                 <li class="slider-item">
                   <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
@@ -602,7 +630,7 @@
 
       <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
 
-        <div class="title-wrapper container">
+        <div class="title-wrapper container" data-scroll="fade-up">
 
           <div>
             <p class="section-subtitle" id="portfolio-label">OUR GRAPHIC WORK</p>
@@ -616,9 +644,9 @@
 
         </div>
 
-        <div class="slider" data-slider>
+        <div class="slider" data-slider data-scroll="fade-in">
 
-          <ul class="slider-container" data-slider-container>
+          <ul class="slider-container" data-slider-container data-scroll-stagger>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
@@ -737,7 +765,7 @@
 
       <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
 
-        <div class="title-wrapper container">
+        <div class="title-wrapper container" data-scroll="fade-up">
 
           <div>
             <p class="section-subtitle" id="portfolio-label">Photography</p>
@@ -752,9 +780,9 @@
 
         </div>
 
-        <div class="slider" data-slider>
+        <div class="slider" data-slider data-scroll="fade-in">
 
-          <ul class="slider-container" data-slider-container>
+          <ul class="slider-container" data-slider-container data-scroll-stagger>
 
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
@@ -880,11 +908,11 @@
       <section class="section blog" aria-labelledby="blog-label">
         <div class="container">
 
-          <p class="section-subtitle" id="blog-label">Latest News</p>
+          <p class="section-subtitle" id="blog-label" data-scroll="fade-up">Latest News</p>
 
-          <h3 class="h2 section-title">Honors & Awards</h3>
+          <h3 class="h2 section-title" data-scroll="fade-up">Honors & Awards</h3>
 
-          <ul class="blog-list">
+          <ul class="blog-list" data-scroll-stagger>
 
             <li>
               <div class="blog-card">
@@ -1009,11 +1037,11 @@
       <section class="section blog" aria-labelledby="digitals-label">
         <div class="container">
 
-          <p class="section-subtitle" id="digitals-label">Digitals</p>
+          <p class="section-subtitle" id="digitals-label" data-scroll="fade-up">Digitals</p>
 
-          <h3 class="h2 section-title">Digital Products</h3>
+          <h3 class="h2 section-title" data-scroll="fade-up">Digital Products</h3>
 
-          <ul class="blog-list">
+          <ul class="blog-list" data-scroll-stagger>
 
             <li>
               <div class="blog-card">
