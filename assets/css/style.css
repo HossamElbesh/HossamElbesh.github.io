@@ -311,6 +311,14 @@ body.nav-active {
   padding-block: var(--section-padding);
 }
 
+.service,
+.skills,
+.portfolio,
+.blog {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
+
 .h1 {
   font-size: var(--fs-3);
   font-weight: var(--fw-800);
@@ -2811,68 +2819,5 @@ body.nav-active {
   .modal-container,
   .modal-btn {
     transition: none;
-  }
-}
-/*-----------------------------------*\
-  #CUSTOM CURSOR
-\*-----------------------------------*/
-
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 10000;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: cyan;
-  box-shadow: 0 0 10px cyan;
-}
-
-.cursor-outline {
-  width: 30px;
-  height: 30px;
-  border: 2px solid cyan;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
-}
-
-body:hover .cursor-dot,
-body:hover .cursor-outline {
-  opacity: 1;
-}
-
-/* Hover state for interactive elements */
-.cursor-dot.hover {
-  transform: translate(-50%, -50%) scale(1.5);
-  background-color: white;
-  box-shadow: 0 0 20px white;
-}
-
-.cursor-outline.hover {
-  transform: translate(-50%, -50%) scale(1.8);
-  border-color: white;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Hide on touch devices */
-@media (hover: none) and (pointer: coarse) {
-  .cursor-dot,
-  .cursor-outline {
-    display: none;
-  }
-}
-
-/* Ensure standard cursor is hidden on desktop for full effect */
-@media (min-width: 992px) {
-  body, a, button, .coding-project-card, .portfolio-card, .blog-card, .service-card, .slider-control {
-    cursor: none;
   }
 }

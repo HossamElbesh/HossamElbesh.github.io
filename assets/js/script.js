@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     // Enable body scroll and show main content
     document.body.classList.add("loaded");
-  }, 3500); // 3.5 seconds to show the full animation
+  }, 2500); // 2.5 seconds to show the animation (reduced from 3.5s for performance)
 });
 
 
@@ -266,48 +266,7 @@ const initSlider = function (currentSlider) {
 
 }
 
-/**
- * CUSTOM CURSOR
- */
-const initCustomCursor = function () {
-  const cursorDot = document.querySelector("[data-cursor-dot]");
-  const cursorOutline = document.querySelector("[data-cursor-outline]");
 
-  if (!cursorDot || !cursorOutline) return;
-
-  window.addEventListener("mousemove", function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    // Show cursor on first move
-    cursorDot.style.opacity = "1";
-    cursorOutline.style.opacity = "1";
-
-    cursorDot.style.display = "block";
-    cursorOutline.style.display = "block";
-
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-
-    cursorOutline.animate({
-      left: `${posX}px`,
-      top: `${posY}px`
-    }, { duration: 500, fill: "forwards" });
-  });
-
-  const interactiveElements = document.querySelectorAll("a, button, .coding-project-card, .portfolio-card, .blog-card, .service-card");
-
-  interactiveElements.forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      cursorDot.classList.add("hover");
-      cursorOutline.classList.add("hover");
-    });
-    el.addEventListener("mouseleave", () => {
-      cursorDot.classList.remove("hover");
-      cursorOutline.classList.remove("hover");
-    });
-  });
-};
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 
@@ -474,7 +433,6 @@ const initScrollAnimations = function () {
 window.addEventListener("DOMContentLoaded", function () {
   initScrollAnimations();
   initProjectModal();
-  initCustomCursor();
 });
 
 
